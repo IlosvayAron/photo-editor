@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImageCroppperComponent } from './image-croppper/image-croppper.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ImageCroppperComponent } from './image-croppper/image-croppper.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NgxDropzoneModule
   ],
   providers: [],
   bootstrap: [AppComponent]

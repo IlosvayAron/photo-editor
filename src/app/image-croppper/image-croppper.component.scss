@@ -1,6 +1,6 @@
-$border-color: #196F3D;
+$border-color: #006633;
 $primary-text-color: #fff;
-$button-color: #196F3D;
+$button-color: #006633;
 $button-shadow: 0px 2px #9E9E9E;
 $hover-btn-color: #1E8449;
 
@@ -9,10 +9,7 @@ $hover-btn-color: #1E8449;
   color: $primary-text-color;
 }
 
-.nav-bar {
-  display: block;
-  height: 3rem;
-}
+
 
 p {
   margin: 20px;
@@ -21,7 +18,7 @@ p {
 .custom-dropzone {
   margin: 20px;
   height: 100%;
-  background: #333;
+  background:#BFBFBF;
   border: 5px dashed $border-color;
   border-radius: 5px;
   font-size: 30px;
@@ -69,4 +66,10 @@ img {
 
   /* This rule is very important, please don't ignore this */
   max-width: 100%;
+}
+
+image-cropper{
+  width: 50%;
+  height: 50%;
+  float: right;
 }

@@ -1,14 +1,8 @@
-<div class="nav-bar"></div>
-<div class="custom-dropzone" ngx-dropzone [disableClick]="true" [accept]="'image/*'" (change)="onSelect($event)" #drop>
+<div class="custom-dropzone" ngx-dropzone [disableClick]="true" [accept]="'image/*'" #drop (change)="onSelect($event)">
 	<div class="dropzone-paragraphs">
     <p>Húzz egy képet ide</p>
     <p>vagy</p>
     <button id="upload-btn" (click)="drop.showFileSelector()">Válasz képet</button>
 	</div>
-    <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
-		<!--<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>-->
-	</ngx-dropzone-image-preview>
-  <div>
-    <img id="image" *ngFor ="let f of files" [src]="f">
-  </div>
+<!-- Megjegyzés!!! -->
 </div>

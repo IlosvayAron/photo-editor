@@ -79,15 +79,19 @@
             <mat-icon class="flip">flip</mat-icon>
           </button>
         </div>
+        <button mat-icon-button class="left-btn" routerLink="">
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <button mat-icon-button class="right-btn" routerLink="/second-picture" >
+          <mat-icon>double_arrow</mat-icon>
+        </button>
     </mat-drawer>
 
     <mat-drawer-content>
         <image-cropper
         [imageChangedEvent]="imageChangedEvent"
         [maintainAspectRatio]="true"
-        [aspectRatio]="4 / 3"
-        [resizeToWidth]="256"
-        [cropperMinWidth]="128"
+        [aspectRatio]="16 / 9"
         [onlyScaleDown]="true"
         [roundCropper]="false"
         [canvasRotation]="canvasRotation"
@@ -99,4 +103,3 @@
         (loadImageFailed)="loadImageFailed()"></image-cropper>
     </mat-drawer-content>
 </mat-drawer-container>
-<!-- <img [src]="croppedImage" /> -->

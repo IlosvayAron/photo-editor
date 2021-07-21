@@ -65,6 +65,7 @@ export class PhotoEditorComponent implements OnInit {
   constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
+    
   }
 
   files: File[] = [];
@@ -82,7 +83,7 @@ export class PhotoEditorComponent implements OnInit {
 
   imageCropped(event: ImageCroppedEvent) {
       this.croppedImage = event.base64;
-      //console.log(event, base64ToFile(event.base64));
+      this.imageService.pushData(this.croppedImage);
   }
 
   imageLoaded() {

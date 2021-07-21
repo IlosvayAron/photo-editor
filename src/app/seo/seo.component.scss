@@ -1,0 +1,91 @@
+$primary-bg-color: #006633;
+$btn-border-color: #fff;
+$primary-text-color: #fff;
+$mat-drawer-bg-color: #B1DDC4;
+
+.example-container{
+
+  height: 94%;
+  left: 15px;
+
+  mat-drawer{
+    display: flex;
+    //justify-content: center;
+    width: 25%;
+    background: $mat-drawer-bg-color;
+    color: $primary-text-color;
+
+    mat-toolbar {
+      background: $primary-bg-color;
+      display: flex;
+      margin-top: 5%;
+
+      span {
+        flex-grow: 3;
+        text-align: center;
+        color: $primary-text-color;
+      }
+    }
+
+    .text{
+      font-size: 1.5em;
+      padding: 15px 10px;
+      margin: 5px 0;
+      background: $primary-bg-color;
+    }
+
+    .left-btn{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 32px;
+      position: absolute;
+      right: 85%;
+      top: 94%;
+      bottom: 1%;
+      background: #F2F2F2;
+      border: 1px solid #232323;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 2px #1E1E25, 0px 2px 4px #1E1E22;
+      border-radius: 8px;
+
+      .rotate{
+        position: absolute;
+        right: 70%;
+        top: 20%;
+        bottom: -40.12%;
+        transform: rotate(-50%, -50%);
+        transform-origin: right;
+        transform:rotateY(180deg);
+      }
+    }
+
+    .right-btn{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 32px;
+      position: absolute;
+      left: 85%;
+      top: 94%;
+      bottom: 1%;
+      background: $primary-bg-color;
+      border: 1px solid #F2F2F2;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 2px #1E1E25, 0px 2px 4px #1E1E22;
+      border-radius: 8px;
+      color: $primary-text-color;
+    }
+
+  }
+
+  mat-drawer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+

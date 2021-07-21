@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ImageCroppedEvent } from 'ngx-image-cropper';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +11,16 @@ export class ImageService {
   onSelect(event: { addedFiles: any; }){
     this.imageChangedEvent = event;
     //this.files.push(...event.addedFiles);
-    // csak az imageChangedEvent-et kellene használni valahogy
+    console.log(this.files);
     console.log(this.imageChangedEvent);
   }
 
-  getImage(): File[]{
+  pushData(data: any){
+    this.files.push(data);
+    console.log(this.files);
+  }
+
+  getImage(): any[]{
     return this.files;
   }
 

@@ -1,0 +1,106 @@
+<input style="margin: 5px;" type="file" (change)="fileChangeEvent($event)" />
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <mat-toolbar>
+            <span>16:9</span>
+            <span>1:1</span>
+            <span>SEO</span>
+        </mat-toolbar>
+        <section class="example-button-row">
+            <button mat-icon-button mat-raised-button>
+                <mat-icon>replay</mat-icon>
+            </button>
+            <button mat-icon-button mat-raised-button>
+                <mat-icon>format_color_fill</mat-icon>
+            </button>
+            <button mat-icon-button mat-raised-button>
+                <mat-icon>rotate_left</mat-icon>
+            </button>
+        </section>
+        <div class="slider-div">
+            <mat-slider
+            [max]="f_max"
+            [min]="f_min"
+            [(ngModel)]="f_value"
+            ></mat-slider>
+            <div class="input-container">
+              <button mat-icon-button (click)="f_minus()">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <input type="text" [value]="f_value" />
+              <button mat-icon-button (click)="f_plus()">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+        </div>
+        <div class="slider-div">
+            <mat-slider
+            [max]="s_max"
+            [min]="s_min"
+            [(ngModel)]="s_value"
+            ></mat-slider>
+            <div class="input-container">
+              <button mat-icon-button (click)="s_minus()">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <input type="text" [value]="s_value" />
+              <button mat-icon-button (click)="s_plus()">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+        </div>
+        <div class="slider-div">
+            <mat-slider
+            [max]="th_max"
+            [min]="th_min"
+            [(ngModel)]="th_value"
+            ></mat-slider>
+            <div class="input-container">
+              <button mat-icon-button (click)="th_minus()">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <input type="text" [value]="th_value" />
+              <button mat-icon-button (click)="th_plus()">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+        </div>
+        <div class="action-btns">
+          <button mat-icon-button mat-raised-button (click)="rotateLeft()">
+            <mat-icon>rotate_90_degrees_ccw</mat-icon>
+          </button>
+          <button mat-icon-button mat-raised-button class="btn-rotate" (click)="rotateRight()">
+            <mat-icon class="rotate">rotate_90_degrees_ccw</mat-icon>
+          </button>
+          <button mat-icon-button mat-raised-button (click)="flipHorizontal()">
+            <mat-icon>flip</mat-icon>
+          </button>
+          <button mat-icon-button mat-raised-button (click)="flipVertical()">
+            <mat-icon class="flip">flip</mat-icon>
+          </button>
+        </div>
+        <button mat-icon-button class="left-btn" routerLink="/first-picture">
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <button mat-icon-button class="right-btn" routerLink="/seo">
+          <mat-icon>double_arrow</mat-icon>
+        </button>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="1 / 1"
+        [onlyScaleDown]="true"
+        [roundCropper]="false"
+        [canvasRotation]="canvasRotation"
+        [transform]="transform"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady($event)"
+        (loadImageFailed)="loadImageFailed()"></image-cropper>
+    </mat-drawer-content>
+</mat-drawer-container>
+<!-- <img [src]="croppedImage" /> -->

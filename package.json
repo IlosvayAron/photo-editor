@@ -22,6 +22,7 @@
     "@angular/router": "~12.1.1",
     "cropperjs": "^1.5.12",
     "ngx-dropzone": "^3.0.0",
+    "ngx-editor": "^10.1.0",
     "ngx-image-cropper": "^4.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

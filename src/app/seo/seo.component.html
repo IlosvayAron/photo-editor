@@ -1,13 +1,23 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <mat-toolbar>
-            <span>16:9</span>
-            <span>1:1</span>
-            <span>SEO</span>
+          <span class="nav_first"><p>16:9</p></span>
+          <span class="nav_second"><p>1:1</p></span>
+          <span class="seo"><p>SEO</p></span>
         </mat-toolbar>
         <div class="text"><b>Helyettesítő szöveg:</b> A football rejtelmei</div>
         <div class="text"><b>Keresőbarát útvonal:</b> a_football_rejtelmei</div>
         <div class="text"><b>Képcím:</b> A football rejtelmei</div>
+        <div class="editor">
+          <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+          <ngx-editor
+            [editor]="editor"
+            [ngModel]="html"
+            [disabled]="false"
+            [placeholder]="'Type here...'"
+          ></ngx-editor>
+        </div>
+        <p class="blikk">Blikk</p>
         <button mat-icon-button class="left-btn" routerLink="/second-picture">
           <mat-icon class="rotate">double_arrow</mat-icon>
         </button>

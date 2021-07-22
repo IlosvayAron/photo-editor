@@ -2,6 +2,7 @@ $primary-bg-color: #006633;
 $btn-border-color: #fff;
 $primary-text-color: #fff;
 $mat-drawer-bg-color: #B1DDC4;
+$span-color: #BFBFBF;
 
 .example-container{
 
@@ -15,13 +16,26 @@ $mat-drawer-bg-color: #B1DDC4;
     background: $mat-drawer-bg-color;
 
     mat-toolbar {
-      background: $primary-bg-color;
+      padding: 0;
       display: flex;
       margin-top: 5%;
+      justify-content: space-between;
 
       span {
         flex-grow: 3;
         text-align: center;
+        height: 100%;
+        width: 100%;
+        font-weight: 800;
+        background: $primary-bg-color;
+        color: $span-color;
+      }
+
+      .nav_first{
+        display: block;
+        background: #55AE3A;
+        height: 100%;
+        align-self: center;
         color: $primary-text-color;
       }
     }

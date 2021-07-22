@@ -10,28 +10,48 @@ $mat-drawer-bg-color: #B1DDC4;
 
   mat-drawer{
     display: flex;
-    //justify-content: center;
     width: 25%;
     background: $mat-drawer-bg-color;
     color: $primary-text-color;
 
     mat-toolbar {
-      background: $primary-bg-color;
+      padding: 0;
       display: flex;
       margin-top: 5%;
 
       span {
         flex-grow: 3;
         text-align: center;
+        height: 100%;
+        width: 100%;
+        font-weight: 800;
+        background: $primary-bg-color;
         color: $primary-text-color;
+      }
+
+      .nav_first, .nav_second{
+        display: block;
+        background: #55AE3A;
+        height: 100%;
+        align-self: center;
+      }
+
+      .seo{
+        color: #BFBFBF;
       }
     }
 
-    .text{
+    .text, .blikk{
       font-size: 1.5em;
       padding: 15px 10px;
       margin: 5px 0;
       background: $primary-bg-color;
+    }
+
+    .editor{
+      font-size: 1.5em;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
 
     .left-btn{
@@ -42,9 +62,10 @@ $mat-drawer-bg-color: #B1DDC4;
       padding: 8px 32px;
       position: absolute;
       right: 85%;
-      top: 94%;
+      top: 40%;
       bottom: 1%;
       background: #F2F2F2;
+      color:#1E1E22;
       border: 1px solid #232323;
       box-sizing: border-box;
       box-shadow: 0px 1px 2px #1E1E25, 0px 2px 4px #1E1E22;
@@ -69,7 +90,7 @@ $mat-drawer-bg-color: #B1DDC4;
       padding: 8px 32px;
       position: absolute;
       left: 85%;
-      top: 94%;
+      top: 40%;
       bottom: 1%;
       background: $primary-bg-color;
       border: 1px solid #F2F2F2;

@@ -2,9 +2,9 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <mat-toolbar>
-            <span>16:9</span>
-            <span>1:1</span>
-            <span>SEO</span>
+            <span class="nav_first"><p>16:9</p></span>
+            <span class="nav_second"><p>1:1</p></span>
+            <span class="seo"><p>SEO</p></span>
         </mat-toolbar>
         <section class="example-button-row">
             <button mat-icon-button mat-raised-button>
@@ -21,6 +21,7 @@
             <mat-slider
             [max]="f_max"
             [min]="f_min"
+            color="primary"
             [(ngModel)]="f_value"
             ></mat-slider>
             <div class="input-container">
@@ -37,6 +38,7 @@
             <mat-slider
             [max]="s_max"
             [min]="s_min"
+            color="primary"
             [(ngModel)]="s_value"
             ></mat-slider>
             <div class="input-container">
@@ -53,6 +55,7 @@
             <mat-slider
             [max]="th_max"
             [min]="th_min"
+            color="primary"
             [(ngModel)]="th_value"
             ></mat-slider>
             <div class="input-container">
